@@ -16,6 +16,8 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+          Dalia del Carmen Mendiola Soto 
+          GIDS5093
         </a>
       </header>
     </div>
