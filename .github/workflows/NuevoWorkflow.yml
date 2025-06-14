@@ -1,19 +1,21 @@
-
 name: Despliega
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout code 
-      - uses: actions/checkout@v4
 
-      
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -22,10 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-
       - name: Build the app
-        run: npm run build     
-
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
