@@ -1,5 +1,5 @@
 
-name: Despliega2
+name: Despliega
 
 on:
   push:
